@@ -21,8 +21,11 @@ jobs:
     - name: Install dependencies
       run: npm install
 
+    - name: Install Angular CLI
+      run: npm install -g @angular/cli
+
     - name: Build Angular app
-      run: ng build --prod
+      run: ng build
 
     - name: Archive artifacts
       uses: actions/upload-artifact@v2
